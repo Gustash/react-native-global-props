@@ -4,8 +4,8 @@ import {
 
 export const setCustomText = customProps => {
   const TextRender = Text.render;
-  const initialDefaultProps = Text.prototype.constructor.defaultProps;
-  Text.prototype.constructor.defaultProps = {
+  const initialDefaultProps = Text.__proto__.constructor.defaultProps;
+  Text.__proto__.constructor.defaultProps = {
     ...initialDefaultProps,
     ...customProps,
   }
